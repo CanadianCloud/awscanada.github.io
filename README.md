@@ -10,7 +10,7 @@
 
 Official website for the AWS User Groups community. A modern, responsive platform built to connect AWS enthusiasts, share knowledge, and promote upcoming events and community activities.
 
-**Live Site:** [awsusergroups.com](https://awsusergroups.com)
+**Live Site:** [www.awscanada.ca](https://www.awscanada.ca)
 
 ### ✨ Features
 
@@ -69,7 +69,7 @@ npm run lint
 |---------|---------|-------------|
 | `npm run dev` | Hot-reloading development server | Active development, sees changes instantly |
 | `npm run preview` | Test production build locally | Before deployment, verify build works correctly |
-| `npm run deploy` | Deploy to production | When ready to publish to awsusergroups.com |
+| `npm run deploy` | Deploy to production | When ready to publish to www.awscanada.ca |
 
 ⚠️ **Important:** Never open `dist/index.html` directly in a browser! The built files use absolute paths and won't work with the `file://` protocol. Always use `npm run preview` to test production builds locally.
 
@@ -93,7 +93,7 @@ This command will:
 2. ✅ Build the production bundle (creates `dist/` folder)
 3. ✅ Copy the `CNAME` file for custom domain
 4. ✅ Push the `dist/` folder to the `gh-pages` branch
-5. ✅ Your site goes live automatically at [awsusergroups.com](https://awsusergroups.com)
+5. ✅ Your site goes live automatically at [www.awscanada.ca](https://www.awscanada.ca)
 
 #### Branch Structure:
 
@@ -200,7 +200,7 @@ This project is open source and available for the AWS community.
 For questions or suggestions, reach out through:
 - Our community meetups
 - GitHub issues
-- Visit [awsusergroups.com](https://awsusergroups.com)
+- Visit [www.awscanada.ca](https://www.awscanada.ca)
 
 ---
 
@@ -210,7 +210,7 @@ For questions or suggestions, reach out through:
 
 Sitio web oficial para la comunidad de AWS User Groups. Una plataforma moderna y responsiva construida para conectar entusiastas de AWS, compartir conocimiento y promover eventos y actividades comunitarias.
 
-**Sitio en vivo:** [awsusergroups.com](https://awsusergroups.com)
+**Sitio en vivo:** [www.awscanada.ca](https://www.awscanada.ca)
 
 ### ✨ Características
 
@@ -283,7 +283,7 @@ Este comando hará:
 2. ✅ Construir el bundle de producción (crea la carpeta `dist/`)
 3. ✅ Copiar el archivo `CNAME` para el dominio personalizado
 4. ✅ Enviar la carpeta `dist/` a la rama `gh-pages`
-5. ✅ Tu sitio se publica automáticamente en [awsusergroups.com](https://awsusergroups.com)
+5. ✅ Tu sitio se publica automáticamente en [www.awscanada.ca](https://www.awscanada.ca)
 
 #### Estructura de Ramas:
 
@@ -359,7 +359,7 @@ Este proyecto es de código abierto y está disponible para la comunidad AWS.
 Para preguntas o sugerencias, contáctanos a través de:
 - Nuestros meetups comunitarios
 - GitHub issues
-- Visita [awsusergroups.com](https://awsusergroups.com)
+- Visita [www.awscanada.ca](https://www.awscanada.ca)
 
 ---
 
