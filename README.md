@@ -1,4 +1,4 @@
-# AWS User Groups Website 🌐
+# AWS Community Canada Website 🌐
 
 [English](#english) | [Español](#español)
 
@@ -8,7 +8,7 @@
 
 ### 🎯 About
 
-Official website for the AWS User Groups community. A modern, responsive platform built to connect AWS enthusiasts, share knowledge, and promote upcoming events and community activities.
+Official website for the AWS Community Canada, based in Vancouver. A modern, responsive platform built to connect AWS enthusiasts, share knowledge, and promote upcoming events and community activities.
 
 **Live Site:** [www.awscanada.ca](https://www.awscanada.ca)
 
@@ -38,10 +38,10 @@ Official website for the AWS User Groups community. A modern, responsive platfor
 
 ```bash
 # Clone the repository
-git clone https://github.com/CanadianCloud/awsusergroups.github.io.git
+git clone https://github.com/CanadianCloud/awscanada.github.io.git
 
 # Navigate to project directory
-cd awsusergroups.github.io
+cd awscanada.github.io
 
 # Install dependencies
 npm install
@@ -193,7 +193,7 @@ We welcome contributions! If you'd like to help improve the website:
 
 ### 📝 License
 
-This project is open source and available for the AWS community.
+This project is open source and available for the AWS Community Canada.
 
 ### 📧 Contact
 
@@ -208,7 +208,7 @@ For questions or suggestions, reach out through:
 
 ### 🎯 Acerca del Proyecto
 
-Sitio web oficial para la comunidad de AWS User Groups. Una plataforma moderna y responsiva construida para conectar entusiastas de AWS, compartir conocimiento y promover eventos y actividades comunitarias.
+Sitio web oficial de AWS Community Canada, con sede en Vancouver. Una plataforma moderna y responsiva construida para conectar entusiastas de AWS, compartir conocimiento y promover eventos y actividades comunitarias.
 
 **Sitio en vivo:** [www.awscanada.ca](https://www.awscanada.ca)
 
@@ -238,10 +238,10 @@ Sitio web oficial para la comunidad de AWS User Groups. Una plataforma moderna y
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/CanadianCloud/awsusergroups.github.io.git
+git clone https://github.com/CanadianCloud/awscanada.github.io.git
 
 # Navegar al directorio del proyecto
-cd awsusergroups.github.io
+cd awscanada.github.io
 
 # Instalar dependencias
 npm install
@@ -352,7 +352,7 @@ Este proyecto es mantenido por nuestros increíbles voluntarios:
 
 ### 📝 Licencia
 
-Este proyecto es de código abierto y está disponible para la comunidad AWS.
+Este proyecto es de código abierto y está disponible para AWS Community Canada.
 
 ### 📧 Contacto
 
@@ -363,4 +363,4 @@ Para preguntas o sugerencias, contáctanos a través de:
 
 ---
 
-Made with ❤️ by the AWS User Groups Community
+Made with ❤️ by AWS Community Canada 🇨🇦
