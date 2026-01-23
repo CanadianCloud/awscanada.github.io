@@ -1,4 +1,4 @@
-import { Header, Footer, ScrollToTop } from './components/layout'
+import { Header, Footer } from './components/layout'
 import Hero from './components/sections/Hero'
 import UpcomingEvents from './components/sections/UpcomingEvents'
 import CommunityDay from './components/sections/CommunityDay'

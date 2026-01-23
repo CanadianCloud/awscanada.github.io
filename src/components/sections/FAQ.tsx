@@ -3,9 +3,25 @@ import eventsImage from '@/assets/gallery/AWSDay24-050.jpg';
 import aboutImage from '@/assets/gallery/AWSDay24-092.jpg';
 import involvedImage from '@/assets/gallery/AWSDay24-119.jpg';
 
+type SectionKey = 'events' | 'about' | 'involved';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQSection {
+  title: string;
+  image: string;
+  items: FAQItem[];
+}
+
+type FAQData = Record<SectionKey, FAQSection>;
+type OpenItems = Record<SectionKey, number | null>;
+
 function FAQ() {
   // FAQ data moved back into the component for simplicity
-  const faqData = {
+  const faqData: FAQData = {
     events: {
       title: 'Events',
       image: eventsImage,
@@ -83,8 +99,8 @@ function FAQ() {
   };
 
   // Simple accordion state: one open per section
-  const [openItems, setOpenItems] = useState({ events: null, about: null, involved: null });
-  const toggleItem = (section, index) => {
+  const [openItems, setOpenItems] = useState<OpenItems>({ events: null, about: null, involved: null });
+  const toggleItem = (section: SectionKey, index: number) => {
     setOpenItems(prev => ({
       ...prev,
       [section]: prev[section] === index ? null : index,
@@ -106,7 +122,7 @@ function FAQ() {
 
         {/* FAQ Sections */}
         <div className="space-y-12 sm:space-y-16 md:space-y-20">
-          {Object.entries(faqData).map(([key, section], sectionIndex) => {
+          {(Object.entries(faqData) as [SectionKey, FAQSection][]).map(([key, section], sectionIndex) => {
             // For 'about' section, swap image/questions and align widths
             if (key === 'about') {
               return (
