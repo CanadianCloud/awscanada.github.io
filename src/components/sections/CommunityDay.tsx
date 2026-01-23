@@ -1,0 +1,62 @@
+import image1 from '../../assets/gallery/AWSDay24-050.jpg';
+import image2 from '../../assets/gallery/AWSDay24-092.jpg';
+import image3 from '../../assets/gallery/AWSDay24-110.jpg';
+import image4 from '../../assets/gallery/1-65f8993a.jpeg';
+
+export default function CommunityDay() {
+  return (
+    <section id="community-day" className="py-12 sm:py-16 md:py-20 bg-[#FFFFFF]">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+          {/* Image Grid */}
+          <div className="flex-1 w-full">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="h-40 sm:h-52 md:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <img src={image1} alt="AWS Community Day presentation" className="w-full h-full object-cover" />
+              </div>
+              <div className="h-40 sm:h-52 md:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <img src={image2} alt="AWS Community Day networking" className="w-full h-full object-cover" />
+              </div>
+              <div className="h-40 sm:h-52 md:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <img src={image3} alt="AWS Community Day crowd" className="w-full h-full object-cover" />
+              </div>
+              <div className="h-40 sm:h-52 md:h-56 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <img src={image4} alt="AWS Community Day event" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 w-full space-y-4 sm:space-y-6">
+            <h2 className="text-[25px] sm:text-[40px] font-bold text-gray-900 leading-tight whitespace-nowrap">
+              AWS Community Day
+            </h2>
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-[#1C1C1C] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
+                AWS Community Day is an annual, community-led event that brings together cloud enthusiasts, builders, and professionals from across Canada to share knowledge, connect, and inspire innovation.
+              </p>
+              <p className="text-[#1C1C1C] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
+                Learn about the event's history and stay connected with the community.
+              </p>
+            </div>
+            <div className="pt-2">
+                <a
+                  href="https://www.awsday.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer bg-aws-orange hover:bg-aws-orange-dark text-black px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 inline-flex items-center text-sm sm:text-base min-h-[48px]"
+                  aria-label="Learn More about AWS Community Day (opens in new tab)"
+                >
+                  Learn More about AWS Community Day
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+
+

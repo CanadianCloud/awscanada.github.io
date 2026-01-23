@@ -1,0 +1,50 @@
+[
+  {
+    "id": "evt-fG1PBHIgWArmkrD",
+    "title": "AWS re:Invent re:Cap",
+    "date": "Jan 23, 2026",
+    "time": "8:30 PM",
+    "startAt": "2026-01-24T01:30:00.000Z",
+    "endAt": "2026-01-24T03:30:00.000Z",
+    "location": "Vancouver",
+    "address": "510 W Georgia St 14th floor, Vancouver, BC V6B 0M3, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/event-covers/tj/1c6be007-a644-4215-adc1-2f4a0d605bf8.png",
+    "url": "https://lu.ma/f0uc6rr2",
+    "description": "",
+    "price": null,
+    "registrationCount": 210
+  },
+  {
+    "id": "evt-29l5EDyiSF3WNaf",
+    "title": "Vancouver Cloud Summit 2026",
+    "date": "May 1, 2026",
+    "time": "5:00 PM",
+    "startAt": "2026-05-01T22:00:00.000Z",
+    "endAt": "2026-05-02T03:00:00.000Z",
+    "location": "Vancouver",
+    "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/event-covers/ly/ce80f4ef-7b27-4f30-84d4-9253e7479b81.png",
+    "url": "https://lu.ma/cloudsummit26",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  },
+  {
+    "id": "evt-VHuuSwxAUGgplkt",
+    "title": "Toronto Cloud Summit 2026",
+    "date": "Aug 29, 2026",
+    "time": "11:00 AM",
+    "startAt": "2026-08-29T16:00:00.000Z",
+    "endAt": "2026-08-29T22:00:00.000Z",
+    "location": "Toronto",
+    "address": "Northeastern University, Toronto Campus, 375 Queen St W, Toronto, ON M5V 2A5, Canada",
+    "city": "Toronto",
+    "image": "https://images.lumacdn.com/event-covers/ly/ce80f4ef-7b27-4f30-84d4-9253e7479b81.png",
+    "url": "https://lu.ma/0xpa2rxj",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  }
+]
