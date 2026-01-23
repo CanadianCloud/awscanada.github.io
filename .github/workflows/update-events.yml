@@ -35,7 +35,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       
-      - name: Check for changes and deploy
+      - name: Check for changes and commit
         run: |
           if git diff --quiet events.json; then
             echo "No event updates"
@@ -45,6 +45,10 @@ jobs:
             git commit -m "Update events calendar [automated]"
             git push
           fi
-          
-          echo "Deploying to gh-pages..."
-          npm run deploy
+      
+      - name: Deploy to GitHub Pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          npm run deploy -- -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
