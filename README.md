@@ -24,6 +24,7 @@ Official website for the AWS Community Canada, based in Vancouver. A modern, res
 - ✅ Modular component architecture
 - ✅ TypeScript for type safety
 - ✅ Optimized performance with Vite
+- ✅ Automated event updates from Luma calendar
 
 ### 🛠️ Technologies
 
@@ -113,6 +114,46 @@ If this is a fresh clone, make sure GitHub Pages is configured:
 
 The site will be available at your custom domain or `https://username.github.io/repository-name/`
 
+### 🔄 Automated Events Scraping
+
+Events are automatically fetched from the [Luma CloudCanada calendar](https://lu.ma/CloudCanada) and stored in `events.json`.
+
+#### How it works:
+
+1. A GitHub Actions workflow runs **daily at midnight (Vancouver time)**
+2. It fetches upcoming events from Luma's API
+3. If there are changes, it commits to `main` and deploys to `gh-pages`
+
+#### Manual Commands:
+
+| Command | Description |
+|---------|-------------|
+| `npm run scrape-events` | Fetch events from Luma and update `events.json` |
+
+#### GitHub Actions Workflow:
+
+The workflow file is located at `.github/workflows/update-events.yml`
+
+To manually trigger:
+1. Go to GitHub → **Actions** tab
+2. Select **"Update events and deploy"**
+3. Click **"Run workflow"**
+
+#### Events Data Structure:
+
+Events are stored in `events.json` with this structure:
+
+| Field | Description |
+|-------|-------------|
+| `id` | Unique event identifier |
+| `title` | Event name |
+| `date` | Formatted date (e.g., "Jan 23, 2026") |
+| `time` | Event time |
+| `location` | Venue name or city |
+| `address` | Full address |
+| `url` | Link to Luma registration |
+| `image` | Event cover image URL |
+
 ### 🔍 Troubleshooting
 
 #### Local Website Not Working?
@@ -147,31 +188,37 @@ npm run dev -- --port 3000
 ### 📁 Project Structure
 
 ```
-src/
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx         # Main navigation
-│   │   ├── Footer.tsx         # Footer component
-│   │   ├── ScrollToTop.tsx    # Scroll to top button
-│   │   └── index.ts           # Layout exports
-│   └── sections/
-│       ├── Hero.tsx           # Hero banner
-│       ├── UpcomingEvents.tsx # Event calendar
-│       ├── CommunityDay.tsx   # AWS Community Day
-│       ├── GetInvolved.tsx    # Get involved section
-│       ├── Gallery.tsx        # Photo gallery
-│       ├── Slider.tsx         # Image slider
-│       ├── Partners.tsx       # Partner logos
-│       ├── Sponsors.tsx       # Sponsor logos
-│       ├── FAQ.tsx            # FAQ section
-│       ├── CTA.tsx            # Call to action
-│       └── index.ts           # Section exports
-├── assets/                    # Images and media files
-├── lib/
-│   └── utils.ts              # Utility functions
-├── App.tsx                   # Main app component
-├── main.tsx                  # App entry point
-└── index.css                 # Global styles with Tailwind
+├── .github/
+│   └── workflows/
+│       └── update-events.yml  # Automated scraping workflow
+├── scripts/
+│   └── scrape-events.js       # Luma events scraper
+├── events.json                # Event data (auto-updated)
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx         # Main navigation
+│   │   │   ├── Footer.tsx         # Footer component
+│   │   │   ├── ScrollToTop.tsx    # Scroll to top button
+│   │   │   └── index.ts           # Layout exports
+│   │   └── sections/
+│   │       ├── Hero.tsx           # Hero banner
+│   │       ├── UpcomingEvents.tsx # Event calendar (reads events.json)
+│   │       ├── CommunityDay.tsx   # AWS Community Day
+│   │       ├── GetInvolved.tsx    # Get involved section
+│   │       ├── Gallery.tsx        # Photo gallery
+│   │       ├── Slider.tsx         # Image slider
+│   │       ├── Partners.tsx       # Partner logos
+│   │       ├── Sponsors.tsx       # Sponsor logos
+│   │       ├── FAQ.tsx            # FAQ section
+│   │       ├── CTA.tsx            # Call to action
+│   │       └── index.ts           # Section exports
+│   ├── assets/                    # Images and media files
+│   ├── lib/
+│   │   └── utils.ts              # Utility functions
+│   ├── App.tsx                   # Main app component
+│   ├── main.tsx                  # App entry point
+│   └── index.css                 # Global styles with Tailwind
 ```
 
 ### 🤝 Volunteers
@@ -224,6 +271,7 @@ Sitio web oficial de AWS Community Canada, con sede en Vancouver. Una plataforma
 - ✅ Arquitectura modular de componentes
 - ✅ TypeScript para seguridad de tipos
 - ✅ Rendimiento optimizado con Vite
+- ✅ Actualización automática de eventos desde calendario Luma
 
 ### 🛠️ Tecnologías
 
@@ -303,34 +351,80 @@ Si es un clon nuevo, asegúrate de que GitHub Pages esté configurado:
 
 El sitio estará disponible en tu dominio personalizado o `https://username.github.io/nombre-repositorio/`
 
+### 🔄 Actualización Automática de Eventos
+
+Los eventos se obtienen automáticamente del [calendario Luma CloudCanada](https://lu.ma/CloudCanada) y se almacenan en `events.json`.
+
+#### Cómo funciona:
+
+1. Un workflow de GitHub Actions se ejecuta **diariamente a medianoche (hora de Vancouver)**
+2. Obtiene los próximos eventos de la API de Luma
+3. Si hay cambios, hace commit a `main` y despliega a `gh-pages`
+
+#### Comandos Manuales:
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run scrape-events` | Obtener eventos de Luma y actualizar `events.json` |
+
+#### Workflow de GitHub Actions:
+
+El archivo del workflow está ubicado en `.github/workflows/update-events.yml`
+
+Para ejecutar manualmente:
+1. Ve a GitHub → pestaña **Actions**
+2. Selecciona **"Update events and deploy"**
+3. Haz clic en **"Run workflow"**
+
+#### Estructura de Datos de Eventos:
+
+Los eventos se almacenan en `events.json` con esta estructura:
+
+| Campo | Descripción |
+|-------|-------------|
+| `id` | Identificador único del evento |
+| `title` | Nombre del evento |
+| `date` | Fecha formateada (ej. "Jan 23, 2026") |
+| `time` | Hora del evento |
+| `location` | Nombre del lugar o ciudad |
+| `address` | Dirección completa |
+| `url` | Enlace al registro en Luma |
+| `image` | URL de la imagen de portada |
+
 ### 📁 Estructura del Proyecto
 
 ```
-src/
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx         # Navegación principal
-│   │   ├── Footer.tsx         # Componente pie de página
-│   │   ├── ScrollToTop.tsx    # Botón scroll al inicio
-│   │   └── index.ts           # Exports del layout
-│   └── sections/
-│       ├── Hero.tsx           # Banner principal
-│       ├── UpcomingEvents.tsx # Calendario de eventos
-│       ├── CommunityDay.tsx   # AWS Community Day
-│       ├── GetInvolved.tsx    # Sección de participación
-│       ├── Gallery.tsx        # Galería de fotos
-│       ├── Slider.tsx         # Carrusel de imágenes
-│       ├── Partners.tsx       # Logos de partners
-│       ├── Sponsors.tsx       # Logos de sponsors
-│       ├── FAQ.tsx            # Preguntas frecuentes
-│       ├── CTA.tsx            # Llamada a la acción
-│       └── index.ts           # Exports de secciones
-├── assets/                    # Imágenes y archivos multimedia
-├── lib/
-│   └── utils.ts              # Funciones utilitarias
-├── App.tsx                   # Componente principal
-├── main.tsx                  # Punto de entrada
-└── index.css                 # Estilos globales con Tailwind
+├── .github/
+│   └── workflows/
+│       └── update-events.yml  # Workflow de scraping automático
+├── scripts/
+│   └── scrape-events.js       # Scraper de eventos Luma
+├── events.json                # Datos de eventos (auto-actualizado)
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx         # Navegación principal
+│   │   │   ├── Footer.tsx         # Componente pie de página
+│   │   │   ├── ScrollToTop.tsx    # Botón scroll al inicio
+│   │   │   └── index.ts           # Exports del layout
+│   │   └── sections/
+│   │       ├── Hero.tsx           # Banner principal
+│   │       ├── UpcomingEvents.tsx # Calendario de eventos (lee events.json)
+│   │       ├── CommunityDay.tsx   # AWS Community Day
+│   │       ├── GetInvolved.tsx    # Sección de participación
+│   │       ├── Gallery.tsx        # Galería de fotos
+│   │       ├── Slider.tsx         # Carrusel de imágenes
+│   │       ├── Partners.tsx       # Logos de partners
+│   │       ├── Sponsors.tsx       # Logos de sponsors
+│   │       ├── FAQ.tsx            # Preguntas frecuentes
+│   │       ├── CTA.tsx            # Llamada a la acción
+│   │       └── index.ts           # Exports de secciones
+│   ├── assets/                    # Imágenes y archivos multimedia
+│   ├── lib/
+│   │   └── utils.ts              # Funciones utilitarias
+│   ├── App.tsx                   # Componente principal
+│   ├── main.tsx                  # Punto de entrada
+│   └── index.css                 # Estilos globales con Tailwind
 ```
 
 ### 🤝 Voluntarios
