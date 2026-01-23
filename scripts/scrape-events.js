@@ -1,7 +1,7 @@
 /**
  * Luma Events Scraper
  * 
- * This script fetches events from the Luma CloudCanada calendar
+ * This script fetches events from the Luma awsvan calendar
  * and saves them to events.json for the website to display.
  * 
  * Usage: npm run scrape-events
@@ -15,8 +15,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Luma API configuration
-// Calendar API ID found from: https://luma.com/CloudCanada
-const LUMA_CALENDAR_API_ID = 'cal-eRivKmWDsR2bxYq';
+// Calendar API ID found from: https://luma.com/awsvan
+const LUMA_CALENDAR_API_ID = 'cal-ol3qWDAVXVD0Wpg';
 const LUMA_API_URL = `https://api2.luma.com/calendar/get-items?calendar_api_id=${LUMA_CALENDAR_API_ID}&pagination_limit=50&period=future`;
 
 // Output file path

@@ -116,7 +116,7 @@ The site will be available at your custom domain or `https://username.github.io/
 
 ### 🔄 Automated Events Scraping
 
-Events are automatically fetched from the [Luma CloudCanada calendar](https://lu.ma/CloudCanada) and stored in `events.json`.
+Events are automatically fetched from the [Luma awsvan calendar](https://lu.ma/awsvan) and stored in `events.json`.
 
 #### How it works:
 
@@ -353,7 +353,7 @@ El sitio estará disponible en tu dominio personalizado o `https://username.gith
 
 ### 🔄 Actualización Automática de Eventos
 
-Los eventos se obtienen automáticamente del [calendario Luma CloudCanada](https://lu.ma/CloudCanada) y se almacenan en `events.json`.
+Los eventos se obtienen automáticamente del [calendario Luma awsvan](https://lu.ma/awsvan) y se almacenan en `events.json`.
 
 #### Cómo funciona:
 
