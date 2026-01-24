@@ -2,7 +2,7 @@ name: Update events and deploy
 
 on:
   schedule:
-    - cron: "0 8 * * *"  # 8 AM UTC = midnight PST (Vancouver)
+    - cron: "0 14 * * *"  # 2 PM UTC = 6 AM PST / 7 AM PDT (Vancouver)
   push:
     branches:
       - main

@@ -34,6 +34,7 @@ function formatDate(isoDate) {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
+    timeZone: 'America/Vancouver',
   });
 }
 
@@ -49,6 +50,7 @@ function formatTime(isoDate) {
     hour: 'numeric',
     minute: '2-digit',
     hour12: true,
+    timeZone: 'America/Vancouver',
   });
 }
 
@@ -112,7 +114,15 @@ async function scrapeEvents() {
     console.log(`✅ Found ${entries.length} upcoming events`);
     
     // Transform events to our format
-    const events = entries.map(transformEvent);
+    const allEvents = entries.map(transformEvent);
+    
+    // Filter out events that have already ended (safety net for Luma API delays)
+    const now = new Date();
+    const events = allEvents.filter(event => new Date(event.endAt) > now);
+    
+    if (allEvents.length !== events.length) {
+      console.log(`🗑️  Filtered out ${allEvents.length - events.length} past event(s)`);
+    }
     
     // Sort by date (earliest first)
     events.sort((a, b) => new Date(a.startAt) - new Date(b.startAt));
