@@ -58,10 +58,10 @@ export default function Sponsors() {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl lg:overflow-visible">
         {/* Header */}
         <div className="mb-8 sm:mb-12 max-w-2xl">
-          <h2 className="text-[40px] font-bold text-gray-900 mb-3 sm:mb-4">
+          <h2 className="text-[30px] sm:text-[40px] font-bold text-gray-900 mb-3 sm:mb-4">
             Sponsors
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-[#1C1C1C]">
+          <p className="text-base lg:text-lg text-[#374151]">
             Thank you to all our past sponsors for your support.
           </p>
         </div>
