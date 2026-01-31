@@ -13,9 +13,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-        <h1 className="text-[40px] sm:text-[2.75rem] md:text-[3.5rem] lg:text-[4.25rem] font-source-sans-bold px-4" >
-          <p className="leading-tight sm:leading-none">
-            <span className="text-aws-orange">Connecting</span> <span>People</span> <br />
+        <h1 className="text-[32px] sm:text-[2.75rem] md:text-[3.5rem] lg:text-[4.25rem] font-source-sans-bold px-4" >
+          <p className="leading-tight sm:leading-tight">
+            <span className="text-aws-orange">Connecting</span> <span>People</span> <br className="hidden sm:block" />
             <span className="text-aws-orange">Empowering</span> <span>Ideas</span>
           </p>
         </h1>

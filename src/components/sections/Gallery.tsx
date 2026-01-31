@@ -39,8 +39,8 @@ export default function Gallery() {
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         
         {/* Masonry Grid Layout - fills all space */}
-        <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[200px] sm:auto-rows-[250px] gap-3 sm:gap-4">
-          {/* Large feature image - spans 4 cols × 2 rows */}
+        <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[150px] sm:auto-rows-[200px] md:auto-rows-[250px] gap-3 sm:gap-4">
+          {/* Large feature image - spans 2 cols on mobile, 4 cols on desktop × 2 rows */}
           <button
             onClick={() => openLightbox(0)}
             className="relative col-span-2 md:col-span-4 md:row-span-2 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
@@ -53,7 +53,7 @@ export default function Gallery() {
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
-          {/* Right side - 2 images stacked */}
+          {/* Right side - 2 images stacked on desktop, side-by-side on mobile */}
           <button
             onClick={() => openLightbox(1)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
@@ -78,7 +78,7 @@ export default function Gallery() {
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
-          {/* Bottom row - 3 images of 2 cols each */}
+          {/* Bottom row - 3 images of 2 cols each on desktop, grid on mobile */}
           <button
             onClick={() => openLightbox(3)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"

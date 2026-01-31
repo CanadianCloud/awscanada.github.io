@@ -58,7 +58,7 @@ export default function UpcomingEvents() {
                   <div className="text-xs sm:text-sm font-semibold text-gray-900 mb-1">
                     {event.date} · {event.time}
                   </div>
-                  <h3 className="text-[20px] sm:text-lg md:text-xl font-bold text-gray-900 leading-tight break-words max-w-full md:max-w-[500px] sm:max-w-[650px] md:max-w-[800px] mb-1">
+                  <h3 className="text-[18px] sm:text-lg md:text-xl font-bold text-gray-900 leading-tight break-words max-w-full md:max-w-[500px] sm:max-w-[650px] md:max-w-[800px] mb-1">
                     {event.title}
                   </h3>
                   {/* Location Info */}

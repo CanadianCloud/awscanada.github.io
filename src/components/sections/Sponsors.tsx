@@ -54,8 +54,8 @@ export default function Sponsors() {
   const allSponsors = [...row1, ...row2, ...row3];
 
   return (
-    <section id="sponsors" className="py-12 sm:py-16 md:py-20 bg-gray-100 overflow-visible lg:overflow-x-visible">
-      <div className="container mx-auto px-4 sm:px-6 max-w-7xl lg:overflow-visible">
+    <section id="sponsors" className="py-12 sm:py-16 md:py-20 bg-gray-100 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         {/* Header */}
         <div className="mb-8 sm:mb-12 max-w-2xl">
           <h2 className="text-[30px] sm:text-[40px] font-bold text-gray-900 mb-3 sm:mb-4">

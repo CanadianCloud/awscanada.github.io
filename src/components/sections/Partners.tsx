@@ -23,14 +23,14 @@ export default function Partners() {
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 md:items-center">
           {/* Left side - Body text */}
           <div className="flex-shrink-0 md:w-[380px] w-full">
-            <p className="text-base md:text-[17px] font-inter text-[#374151] leading-relaxed whitespace-nowrap">
+            <p className="text-base md:text-[17px] font-inter text-[#374151] leading-relaxed">
               We're proud to collaborate with organizations that help<br />
               us grow and empower the AWS community.
             </p>
           </div>
 
           {/* Right side - Logos horizontal */}
-          <div className="flex-1 w-full flex flex-wrap md:flex-nowrap gap-3 justify-center md:justify-end md:mr-[-12px]">
+          <div className="flex-1 w-full flex flex-wrap md:flex-nowrap gap-3 justify-center md:justify-end">
             {partners.map((partner, index) => (
               <div
                 key={index}
