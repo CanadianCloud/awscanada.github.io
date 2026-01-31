@@ -31,10 +31,10 @@ export default function UpcomingEvents() {
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         {/* Header */}
         <div className="text-left mb-6 sm:mb-8">
-          <h2 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-2 sm:mb-3 px-0">
+          <h2 className="text-[30px] sm:text-[40px] font-bold text-gray-900 mb-2 sm:mb-3 px-0">
             Upcoming Events
           </h2>
-          <p className="text-sm sm:text-base text-gray-700 px-0">
+          <p className="text-base text-gray-700 px-0">
             Check out the upcoming events and get involved, your participation makes a difference!
           </p>
         </div>
@@ -43,26 +43,27 @@ export default function UpcomingEvents() {
           {events.map((event) => (
             <div key={event.id} className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               {/* Event Image OUTSIDE the card */}
-              <div className="w-full md:w-[160px] h-[110px] sm:w-[200px] sm:h-[130px] md:w-[260px] md:h-[160px] rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center md:mb-0 mb-4">
+              <div className="w-full md:w-[160px] h-[240px] sm:w-[200px] sm:h-[248px] md:w-[260px] md:h-[160px] rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center md:mb-0 mb-4">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ aspectRatio: 'auto' }}
                 />
               </div>
               {/* Event Card */}
-              <div className="flex-1 bg-[#F8F8F8] border border-gray-200 rounded-2xl px-4 py-4 sm:px-6 sm:py-5 flex flex-col justify-between min-h-[110px] sm:min-h-[130px] md:min-h-[160px] w-full md:w-auto">
+              <div className="flex-1 bg-[#F8F8F8] border border-gray-200 rounded-2xl px-4 py-4 sm:px-6 sm:py-5 flex flex-col justify-between min-h-[110px] sm:min-h-[130px] md:min-h-[160px] w-full md:w-auto md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-4">
                 {/* Title and Date */}
                 <div>
                   <div className="text-xs sm:text-sm font-semibold text-gray-900 mb-1">
                     {event.date} · {event.time}
                   </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-tight break-words max-w-full md:max-w-[500px] sm:max-w-[650px] md:max-w-[800px] mb-1">
+                  <h3 className="text-[20px] sm:text-lg md:text-xl font-bold text-gray-900 leading-tight break-words max-w-full md:max-w-[500px] sm:max-w-[650px] md:max-w-[800px] mb-1">
                     {event.title}
                   </h3>
                   {/* Location Info */}
                   <div className="flex flex-col gap-0.5 sm:gap-1 mb-0">
-                    <div className="flex items-center text-gray-700 text-xs sm:text-sm">
+                    <div className="flex items-center text-gray-700 text-[16px] sm:text-sm">
                       <svg
                         className="w-4 h-4 mr-1 flex-shrink-0"
                         fill="none"
@@ -84,7 +85,7 @@ export default function UpcomingEvents() {
                       </svg>
                       <span>{event.location}</span>
                     </div>
-                    <div className="text-xs text-gray-500">{event.address}</div>
+                    <div className="text-[16px] sm:text-xs text-gray-500">{event.address}</div>
                   </div>
                 </div>
                 {/* Button linking to specific event */}
@@ -92,7 +93,7 @@ export default function UpcomingEvents() {
                   href={event.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#FF9900] hover:bg-[#e88a00] text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-200 shadow-sm text-sm font-normal min-w-[120px] mt-4 md:mt-1 md:self-end w-full md:w-auto flex items-center justify-center text-center"
+                  className="bg-[#FF9900] hover:bg-[#e88a00] text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full transition-all duration-200 shadow-sm text-sm font-normal min-w-[120px] mt-4 md:mt-0 md:justify-self-end w-full md:w-auto flex items-center justify-center text-center"
                   aria-label={`Register for ${event.title}`}
                 >
                   Save Your Spot →

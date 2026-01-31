@@ -48,13 +48,13 @@ export default function GetInvolved() {
                   alt={`${card.titleLine1} ${card.titleLine2}`}
                   className="w-10 h-10 sm:w-12 sm:h-12"
                 />
-                <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
+                <h3 className="text-[17px] sm:text-xl font-bold text-white leading-tight">
                   {card.titleLine1}<br />
                   {card.titleLine2}
                 </h3>
               </a>
               {/* Description */}
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-300 text-base md:text-base leading-relaxed">
                 {card.description}
               </p>
             </div>

@@ -28,14 +28,14 @@ export default function CommunityDay() {
 
           {/* Content */}
           <div className="flex-1 w-full space-y-4 sm:space-y-6">
-            <h2 className="text-[25px] sm:text-[40px] font-bold text-gray-900 leading-tight whitespace-nowrap">
+            <h2 className="text-[30px] sm:text-[40px] font-bold text-gray-900 leading-tight whitespace-nowrap">
               AWS Community Day
             </h2>
             <div className="space-y-3 sm:space-y-4">
-              <p className="text-[#1C1C1C] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
+              <p className="text-[#374151] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
                 AWS Community Day is an annual, community-led event that brings together cloud enthusiasts, builders, and professionals from across Canada to share knowledge, connect, and inspire innovation.
               </p>
-              <p className="text-[#1C1C1C] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
+              <p className="text-[#374151] font-inter font-normal text-[17px] leading-relaxed tracking-normal">
                 Learn about the event's history and stay connected with the community.
               </p>
             </div>

@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           {/* Helpful Links */}
-          <div className="ml-28">
+          <div className="text-center sm:text-left sm:ml-28">
             <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Helpful Links</h4>
             <ul className="space-y-0.5 text-white text-sm sm:text-[15px]">
               <li>
@@ -81,14 +81,14 @@ export default function Footer() {
           {/* Discord CTA */}
           <div>
             <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Join Our Discord Channel!</h4>
-            <p className="text-white mb-4 sm:mb-5 leading-relaxed text-sm sm:text-[15px]">
+            <p className="text-white mb-4 sm:mb-5 leading-relaxed text-sm sm:text-[15px] text-left">
               Connect with fellow AWS enthusiasts, share ideas, learn from the community, and stay updated on upcoming events
             </p>
             <a
               href="https://discord.com/invite/wg372JtEK8"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#FF9900] hover:bg-[#FF9900] text-black px-6 sm:px-8 py-2 sm:py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 text-sm sm:text-base min-h-[48px]"
+              className="inline-block bg-[#FF9900] hover:bg-[#FF9900] text-black px-6 sm:px-8 py-3 sm:py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 text-sm sm:text-base min-h-[48px] text-center"
             >
               Join Discord Here
             </a>
