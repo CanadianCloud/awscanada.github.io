@@ -14,5 +14,37 @@
     "description": "",
     "price": null,
     "registrationCount": 0
+  },
+  {
+    "id": "evt-sctvrlmqU92kTuQ",
+    "title": "AWS AI Workshop",
+    "date": "May 1, 2026",
+    "time": "4:00 PM",
+    "startAt": "2026-05-01T23:00:00.000Z",
+    "endAt": "2026-05-02T01:30:00.000Z",
+    "location": "Vancouver",
+    "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/event-covers/sn/07a83efd-e384-4286-a0de-8ee512c72612.png",
+    "url": "https://lu.ma/awsworkshop",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  },
+  {
+    "id": "evt-TxuBWVVEpfuOvFb",
+    "title": "After Party - Cloud Summit",
+    "date": "May 1, 2026",
+    "time": "7:30 PM",
+    "startAt": "2026-05-02T02:30:00.000Z",
+    "endAt": "2026-05-02T04:30:00.000Z",
+    "location": "Vancouver",
+    "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/event-covers/uc/5ef45bc5-2c18-41f0-989e-7248b85ac7f7.png",
+    "url": "https://lu.ma/csparty",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
   }
 ]
