@@ -3,8 +3,8 @@
     "id": "evt-08EAviNfeqIelMT",
     "title": "AWS Vancouver UG - July",
     "date": "Jul 16, 2026",
-    "time": "5:30 PM",
-    "startAt": "2026-07-17T00:30:00.000Z",
+    "time": "5:00 PM",
+    "startAt": "2026-07-17T00:00:00.000Z",
     "endAt": "2026-07-17T02:45:00.000Z",
     "location": "Vancouver",
     "address": "308 Dunsmuir St, Vancouver, BC V6B 0T5, Canada",
@@ -13,7 +13,7 @@
     "url": "https://lu.ma/aws-july",
     "description": "",
     "price": null,
-    "registrationCount": 306
+    "registrationCount": 315
   },
   {
     "id": "evt-7PE3YKb00vLBsyy",
@@ -27,6 +27,22 @@
     "city": "Toronto",
     "image": "https://images.lumacdn.com/uploads/1m/7a560bf4-527b-4b4c-86b6-252b245ef4f5.png",
     "url": "https://lu.ma/awsday26",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  },
+  {
+    "id": "evt-5XhVSHtjfUPnca3",
+    "title": "AWS Vancouver: DevRel All-Stars",
+    "date": "Sep 2, 2026",
+    "time": "5:00 PM",
+    "startAt": "2026-09-03T00:00:00.000Z",
+    "endAt": "2026-09-03T02:45:00.000Z",
+    "location": "Vancouver",
+    "address": "349 W Georgia St, Vancouver, BC, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/uploads/tv/c48466d2-8025-4102-bbbe-42a8a915ab07.png",
+    "url": "https://lu.ma/cloud-ri5l",
     "description": "",
     "price": null,
     "registrationCount": 0
