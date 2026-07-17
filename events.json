@@ -1,21 +1,5 @@
 [
   {
-    "id": "evt-08EAviNfeqIelMT",
-    "title": "AWS Vancouver UG - July",
-    "date": "Jul 16, 2026",
-    "time": "5:00 PM",
-    "startAt": "2026-07-17T00:00:00.000Z",
-    "endAt": "2026-07-17T02:45:00.000Z",
-    "location": "Vancouver",
-    "address": "308 Dunsmuir St, Vancouver, BC V6B 0T5, Canada",
-    "city": "Vancouver",
-    "image": "https://images.lumacdn.com/uploads/xm/7f7391a0-6fb7-45bf-a060-6544592c60f3.png",
-    "url": "https://lu.ma/aws-july",
-    "description": "",
-    "price": null,
-    "registrationCount": 315
-  },
-  {
     "id": "evt-7PE3YKb00vLBsyy",
     "title": "Amazon AWS Community Day 🌥️",
     "date": "Aug 29, 2026",
@@ -45,6 +29,6 @@
     "url": "https://lu.ma/cloud-ri5l",
     "description": "",
     "price": null,
-    "registrationCount": 1
+    "registrationCount": 49
   }
 ]
