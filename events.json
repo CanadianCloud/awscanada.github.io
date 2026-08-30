@@ -1,21 +1,5 @@
 [
   {
-    "id": "evt-7PE3YKb00vLBsyy",
-    "title": "Amazon AWS Community Day 🌥️",
-    "date": "Aug 29, 2026",
-    "time": "9:00 AM",
-    "startAt": "2026-08-29T16:00:00.000Z",
-    "endAt": "2026-08-29T22:00:00.000Z",
-    "location": "Toronto",
-    "address": "Northeastern University, Toronto Campus, 375 Queen St W, Toronto, ON M5V 2A5, Canada",
-    "city": "Toronto",
-    "image": "https://images.lumacdn.com/uploads/1m/7a560bf4-527b-4b4c-86b6-252b245ef4f5.png",
-    "url": "https://lu.ma/awsday26",
-    "description": "",
-    "price": null,
-    "registrationCount": 0
-  },
-  {
     "id": "evt-5XhVSHtjfUPnca3",
     "title": "AWS Vancouver: DevRel All-Stars",
     "date": "Sep 2, 2026",
@@ -29,6 +13,6 @@
     "url": "https://lu.ma/cloud-ri5l",
     "description": "",
     "price": null,
-    "registrationCount": 334
+    "registrationCount": 341
   }
 ]
