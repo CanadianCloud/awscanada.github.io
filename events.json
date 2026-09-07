@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "evt-7glED2lC0WaUMOQ",
+    "title": "Hacker Rivals: End of Summer Social",
+    "date": "Sep 15, 2026",
+    "time": "6:00 PM",
+    "startAt": "2026-09-16T01:00:00.000Z",
+    "endAt": "2026-09-16T04:00:00.000Z",
+    "location": "Vancouver",
+    "address": "The Pint Public House, 455 Abbott St, Vancouver, BC V6B 2L2, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/uploads/l6/820042ca-2c09-4b45-be89-d4df2f01702d.png",
+    "url": "https://lu.ma/rubyhackpub",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  }
+]
