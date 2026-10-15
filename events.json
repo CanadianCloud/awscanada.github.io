@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "evt-2itL27JUcXBIsJl",
+    "title": "Pick a Side: The Future of Tech 🔥",
+    "date": "Nov 12, 2026",
+    "time": "5:00 PM",
+    "startAt": "2026-11-13T00:00:00.000Z",
+    "endAt": "2026-11-13T02:45:00.000Z",
+    "location": "Vancouver",
+    "address": "308 Dunsmuir St, Vancouver, BC V6B 0T5, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/uploads/ga/50ce61ee-61e6-4e76-ac4a-9615a4f259a6.png",
+    "url": "https://lu.ma/cloud-1ue4",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
+  }
+]
