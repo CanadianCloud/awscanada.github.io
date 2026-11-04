@@ -13,6 +13,22 @@
     "url": "https://lu.ma/cloud-1ue4",
     "description": "",
     "price": null,
-    "registrationCount": 245
+    "registrationCount": 254
+  },
+  {
+    "id": "evt-4DpgVAYzwoMgQhV",
+    "title": "Vancouver Tech's Annual Year-End Celebration",
+    "date": "Dec 9, 2026",
+    "time": "6:00 PM",
+    "startAt": "2026-12-10T01:00:00.000Z",
+    "endAt": "2026-12-10T04:00:00.000Z",
+    "location": "Vancouver",
+    "address": "The Pint Public House, 455 Abbott St, Vancouver, BC V6B 2L2, Canada",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/uploads/88/c04a5bfd-660e-403a-beb0-72443f59aa59.png",
+    "url": "https://lu.ma/techvancouver",
+    "description": "",
+    "price": null,
+    "registrationCount": 52
   }
 ]
