@@ -35,19 +35,19 @@ export default function Gallery() {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20" style={{ backgroundColor: '#fff' }}>
+    <section className="community-gallery" aria-label="Photos from our community">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         
         {/* Masonry Grid Layout - fills all space */}
         <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[150px] sm:auto-rows-[200px] md:auto-rows-[250px] gap-3 sm:gap-4">
           {/* Large feature image - spans 2 cols on mobile, 4 cols on desktop × 2 rows */}
           <button
-            onClick={() => openLightbox(0)}
+            aria-label="Open community photo 1" onClick={() => openLightbox(0)}
             className="relative col-span-2 md:col-span-4 md:row-span-2 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[0].src}
-              alt="Gallery image 1"
+              loading="lazy" alt="Gallery image 1"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
@@ -55,24 +55,24 @@ export default function Gallery() {
 
           {/* Right side - 2 images stacked on desktop, side-by-side on mobile */}
           <button
-            onClick={() => openLightbox(1)}
+            aria-label="Open community photo 2" onClick={() => openLightbox(1)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[1].src}
-              alt="Gallery image 2"
+              loading="lazy" alt="Gallery image 2"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
           <button
-            onClick={() => openLightbox(2)}
+            aria-label="Open community photo 3" onClick={() => openLightbox(2)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[2].src}
-              alt="Gallery image 3"
+              loading="lazy" alt="Gallery image 3"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
@@ -80,36 +80,36 @@ export default function Gallery() {
 
           {/* Bottom row - 3 images of 2 cols each on desktop, grid on mobile */}
           <button
-            onClick={() => openLightbox(3)}
+            aria-label="Open community photo 4" onClick={() => openLightbox(3)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[3].src}
-              alt="Gallery image 4"
+              loading="lazy" alt="Gallery image 4"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
           <button
-            onClick={() => openLightbox(4)}
+            aria-label="Open community photo 5" onClick={() => openLightbox(4)}
             className="relative col-span-1 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[4].src}
-              alt="Gallery image 5"
+              loading="lazy" alt="Gallery image 5"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
           <button
-            onClick={() => openLightbox(5)}
+            aria-label="Open community photo 6" onClick={() => openLightbox(5)}
             className="relative col-span-2 md:col-span-2 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[5].src}
-              alt="Gallery image 6"
+              loading="lazy" alt="Gallery image 6"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
@@ -117,24 +117,24 @@ export default function Gallery() {
 
           {/* Extra row */}
           <button
-            onClick={() => openLightbox(6)}
+            aria-label="Open community photo 7" onClick={() => openLightbox(6)}
             className="relative col-span-1 md:col-span-3 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[6].src}
-              alt="Gallery image 7"
+              loading="lazy" alt="Gallery image 7"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />
           </button>
 
           <button
-            onClick={() => openLightbox(7)}
+            aria-label="Open community photo 8" onClick={() => openLightbox(7)}
             className="relative col-span-1 md:col-span-3 md:row-span-1 overflow-hidden rounded-lg cursor-pointer bg-gray-200 active:scale-[0.98]"
           >
             <img
               src={images[7].src}
-              alt="Gallery image 8"
+              loading="lazy" alt="Gallery image 8"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black opacity-0" />

@@ -17,8 +17,9 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    allowedHosts: ['terminal.local'],
     port: 5173,
-    open: true, // Auto-open browser on dev server start
+    open: false,
   },
   preview: {
     port: 4173,
