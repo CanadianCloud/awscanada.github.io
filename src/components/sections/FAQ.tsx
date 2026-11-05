@@ -101,7 +101,24 @@ function FAQ() {
     <section id="faq" className="faq-section shell section-space" aria-labelledby="faq-title">
       <div className="faq-layout">
         <div className="faq-heading"><p className="eyebrow">04 / Frequently asked questions</p><h2 id="faq-title" className="display-heading">A little<br />more clarity.</h2><p>New here? Start with a few of the things people ask us most.</p></div>
-        <div className="faq-groups">{Object.entries(faqData).map(([key, group]) => <div className="faq-group" key={key}><h3 id={`faq-${key}`}>{group.title}</h3>{group.items.map(item => <details key={item.question}><summary><span>{item.question}</span><span aria-hidden="true"><span className="faq-plus">+</span><span className="faq-minus">−</span></span></summary><p>{item.answer}</p></details>)}</div>)}</div>
+        <div className="faq-groups">
+          {Object.entries(faqData).map(([key, group]) => (
+            <details className="faq-group faq-category" id={`faq-${key}`} name="faq-categories" key={key}>
+              <summary>
+                <h3>{group.title}</h3>
+                <span className="category-toggle" aria-hidden="true"><span className="category-plus">+</span><span className="category-minus">−</span></span>
+              </summary>
+              <div className="faq-category-content">
+                {group.items.map(item => (
+                  <details key={item.question} name={`faq-${key}-questions`}>
+                    <summary><span>{item.question}</span><span aria-hidden="true"><span className="faq-plus">+</span><span className="faq-minus">−</span></span></summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );

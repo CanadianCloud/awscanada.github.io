@@ -1,3 +1,5 @@
+import LogoArtwork from '../LogoArtwork';
+import type { ArtworkCrop } from '../LogoArtwork';
 // Import sponsor logos
 import docker from '../../assets/past_sponsors_logos/Docker-Logo-2013-2015.png';
 import datadog from '../../assets/past_sponsors_logos/Datadog_logo.svg.png';
@@ -53,5 +55,13 @@ export default function Sponsors() {
 
   const allSponsors = [...row1, ...row2, ...row3];
 
-  return <section id="sponsors" className="sponsors-section shell section-space"><div className="section-heading"><div><p className="eyebrow">A little support goes a long way</p><h2 className="display-heading">Thanks for making it happen.</h2></div><p>To all our past sponsors: thank you for helping us bring people together.</p></div><div className="sponsor-grid">{allSponsors.map(sponsor => <div className="sponsor-logo" key={sponsor.name}><img src={sponsor.logo} alt={sponsor.name} loading="lazy" /></div>)}</div></section>;
+  const crops: Record<string, ArtworkCrop> = {
+    'Hootsuite': { x: 30, y: 712, width: 3779, height: 736, sourceWidth: 3840, sourceHeight: 2160 },
+    'VMware': { x: 10, y: 779, width: 3819, height: 589, sourceWidth: 3840, sourceHeight: 2160 },
+    'Trend Micro': { x: 0, y: 195, width: 600, height: 210, sourceWidth: 600, sourceHeight: 600 },
+    'Sumo Logic': { x: 0, y: 0, width: 864, height: 1168, sourceWidth: 864, sourceHeight: 1168 },
+    'Veeam': { x: 66, y: 515, width: 3708, height: 1129, sourceWidth: 3840, sourceHeight: 2160 },
+  };
+
+  return <section id="sponsors" className="sponsors-section shell section-space"><div className="section-heading"><div><p className="eyebrow">A little support goes a long way</p><h2 className="display-heading">Thanks for making it happen.</h2></div><p>To all our past sponsors: thank you for helping us bring people together.</p></div><div className="sponsor-grid">{allSponsors.map(sponsor => <div className={`sponsor-logo${crops[sponsor.name] ? ' sponsor-logo--featured' : ''}${sponsor.name === 'Sumo Logic' ? ' sponsor-logo--sumo' : ''}`} key={sponsor.name}><LogoArtwork src={sponsor.logo} alt={sponsor.name} crop={crops[sponsor.name]} /></div>)}</div></section>;
 }

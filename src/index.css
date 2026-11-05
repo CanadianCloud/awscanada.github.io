@@ -241,3 +241,35 @@ button:focus-visible,a:focus-visible,summary:focus-visible { outline:3px solid #
 
 .community-day .button-cream { background:var(--ink); color:var(--paper); }
 .community-day .button-cream:hover { background:#36322c; }
+
+/* Tightly frame padded logos while preserving their source artwork. */
+.logo-artwork { display:block; width:100%; overflow:hidden; }
+.sponsor-logo--featured { padding:16px 18px; min-height:100px; }
+.sponsor-logo--featured .logo-artwork { max-width:200px; height:58px; }
+.sponsor-logo--sumo .logo-artwork { height:76px; max-width:90px; }
+.partner-logo--cloud-summit { background:#172432; padding:20px; }
+.partner-logo--cloud-summit .logo-artwork { height:94px; max-width:180px; }
+.partner-logo--cpca { padding:20px; }
+.partner-logo--cpca .logo-artwork { height:76px; max-width:225px; }
+
+/* Three category rows replace the full question list at first glance. */
+.faq-category { margin-bottom:0; border-bottom:1px solid var(--line); }
+.faq-category:first-child { border-top:1px solid var(--line); }
+.faq-category>summary { padding:23px 0; }
+.faq-category>summary h3 { font-size:20px; font-weight:700; letter-spacing:-.02em; text-transform:none; margin:0; }
+.faq-category>summary:hover h3 { text-decoration:underline; text-decoration-color:var(--orange); text-decoration-thickness:3px; text-underline-offset:5px; }
+.faq-category>summary .category-toggle { width:30px; height:30px; text-align:center; line-height:30px; background:var(--orange); font-size:23px; }
+.faq-category[open]>summary .category-plus, .faq-category:not([open])>summary .category-minus { display:none; }
+.faq-category-content { padding:0 0 12px 20px; border-left:2px solid var(--orange); margin-bottom:16px; }
+.faq-category-content>details:last-child { border-bottom:0; }
+@media (max-width:600px) {
+  .sponsor-logo--featured { padding:14px; min-height:100px; }
+  .sponsor-logo--featured .logo-artwork { height:54px; }
+  .sponsor-logo--sumo .logo-artwork { height:72px; }
+  .partner-logo--cloud-summit .logo-artwork { height:78px; }
+  .partner-logo--cpca { padding:15px; }
+  .partner-logo--cpca .logo-artwork { height:65px; }
+  .faq-category>summary { padding:20px 0; }
+  .faq-category>summary h3 { font-size:18px; }
+  .faq-category-content { padding-left:12px; }
+}
