@@ -10,7 +10,7 @@ import speakerPhoto from '../assets/gallery/AWSDay24-119.jpg'
 import communityPhoto from '../assets/gallery/AWSDay24-050.jpg'
 import crowdPhoto from '../assets/gallery/AWSDay24-092.jpg'
 import stagePhoto from '../assets/gallery/AWSDay24-110.jpg'
-import cityPhoto from '../assets/hero_background.jpg'
+import cityPhoto from '../assets/vancouver-skyline-mountains.jpg'
 import meetupPhoto from '../assets/gallery/1-65f8993a.jpeg'
 
 const COMMUNITY_CHAT = 'https://chat.whatsapp.com/D74a4GrpOwiBlFJei8Hk12'
@@ -50,7 +50,7 @@ function Hero() {
       <p className="eyebrow hero-eyebrow">Vancouver’s AWS community <span /></p>
       <h1 id="hero-title"><span>Cloud is better </span><span>together.</span></h1>
       <div className="hero-copy"><p>Local meetups. Shared knowledge.<br />Real connections. Community-led<br className="desktop-break" /> since 2014.</p><div className="hero-actions"><a href="#events" className="button button-ink">Explore events <ArrowRight size={20} /></a><a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange">Join the Community Chat <ArrowRight size={20} /></a></div></div>
-      <div className="hero-art"><div className="hero-orange" aria-hidden="true" /><figure className="hero-photo hero-speaker"><img src={speakerPhoto} alt="A community speaker sharing ideas at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-people"><img src={communityPhoto} alt="Community members connecting at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-city"><img src={cityPhoto} alt="Vancouver’s waterfront and skyline" /></figure></div>
+      <div className="hero-art"><div className="hero-orange" aria-hidden="true" /><figure className="hero-photo hero-speaker"><img src={speakerPhoto} alt="A community speaker sharing ideas at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-people"><img src={communityPhoto} alt="Community members connecting at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-city"><img src={cityPhoto} alt="Vancouver’s downtown skyline, False Creek waterfront and North Shore mountains" /></figure></div>
     </section>
     <div className="values-strip" aria-label="Meet, learn, share, build"><div>Meet <span>·</span> Learn <span>·</span> Share <span>·</span> Build</div></div>
   </>

@@ -62,7 +62,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible { outline:3px solid #
 .hero-people { width:52%; height:49%; left:0; bottom:0; clip-path:polygon(20% 6%,100% 0,100% 100%,0 100%); }
 .hero-people img { object-position:50% 50%; }
 .hero-city { width:54%; height:47%; right:0; bottom:0; clip-path:polygon(0 0,100% 7%,100% 100%,0 100%); }
-.hero-city img { object-position:72% 50%; }
+.hero-city img { object-position:60% 50%; }
 .art-caption { position:absolute; right:0; bottom:49%; font-size:9px; letter-spacing:.1em; text-transform:uppercase; transform:rotate(-3deg); background:var(--orange); padding:6px 12px; color:var(--ink); }
 .values-strip { background:var(--orange); color:var(--ink); padding:18px 20px; text-align:center; }
 .values-strip>div { font-family:'Anton',Impact,sans-serif; font-size:clamp(20px,3.3vw,48px); text-transform:uppercase; letter-spacing:.16em; }
