@@ -11,5 +11,5 @@ export default function Partners() {
     { name: 'CPCA', logo: cpca },
   ];
 
-  return <section id="partners" className="partners-section shell section-space"><div className="section-heading"><div><p className="eyebrow">Better, together</p><h2 className="display-heading">Our community partners.</h2></div><p>We collaborate with organizations that share our curiosity and help the community grow.</p></div><div className="partner-grid">{partners.map(partner => <div className="partner-logo" key={partner.name}><img src={partner.logo} alt={partner.name} loading="lazy" /></div>)}</div></section>;
+  return <section id="partners" className="partners-section shell section-space"><div className="section-heading"><div><p className="eyebrow">Better, together</p><h2 className="display-heading">Our community partners.</h2></div><p>We’re proud to collaborate with organizations that help us grow and empower the AWS community.</p></div><div className="partner-grid">{partners.map(partner => <div className="partner-logo" key={partner.name}><img src={partner.logo} alt={partner.name} loading="lazy" /></div>)}</div></section>;
 }

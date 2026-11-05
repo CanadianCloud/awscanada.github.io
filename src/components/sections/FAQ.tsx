@@ -83,7 +83,7 @@ function FAQ() {
         },
         {
           question: 'What is involved in volunteering?',
-          answer: 'It\'s up to you. Let us know what your skills are and we\'ll do our best to provide a rewarding experience. It could be as simple as greeting, or more complex like looking after the AV gear. It could even be helping online with the discord channel, newsletter, website, etc.',
+          answer: 'It\'s up to you. Let us know what your skills are and we\'ll do our best to provide a rewarding experience. It could be as simple as greeting, or more complex like looking after the AV gear. It could even be helping online with the community chat, newsletter, website, etc.',
         },
         {
           question: 'How can I give a talk?',
@@ -100,8 +100,8 @@ function FAQ() {
   return (
     <section id="faq" className="faq-section shell section-space" aria-labelledby="faq-title">
       <div className="faq-layout">
-        <div className="faq-heading"><p className="eyebrow">04 / Good to know</p><h2 id="faq-title" className="display-heading">A little<br />more clarity.</h2><p>New here? Start with a few of the things people ask us most.</p></div>
-        <div className="faq-groups">{Object.entries(faqData).map(([key, group]) => <div className="faq-group" key={key}><h3>{group.title}</h3>{group.items.map(item => <details key={item.question}><summary><span>{item.question}</span><span aria-hidden="true"><span className="faq-plus">+</span><span className="faq-minus">−</span></span></summary><p>{item.answer}</p></details>)}</div>)}</div>
+        <div className="faq-heading"><p className="eyebrow">04 / Frequently asked questions</p><h2 id="faq-title" className="display-heading">A little<br />more clarity.</h2><p>New here? Start with a few of the things people ask us most.</p></div>
+        <div className="faq-groups">{Object.entries(faqData).map(([key, group]) => <div className="faq-group" key={key}><h3 id={`faq-${key}`}>{group.title}</h3>{group.items.map(item => <details key={item.question}><summary><span>{item.question}</span><span aria-hidden="true"><span className="faq-plus">+</span><span className="faq-minus">−</span></span></summary><p>{item.answer}</p></details>)}</div>)}</div>
       </div>
     </section>
   );

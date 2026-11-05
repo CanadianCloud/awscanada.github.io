@@ -13,7 +13,7 @@ export default function Footer() {
     { icon: lumaIcon, href: 'https://luma.com/awsvan', alt: 'Luma' },
     { icon: linkedinIcon, href: 'https://linkedin.com/company/canadiancloud', alt: 'LinkedIn' },
     { icon: instagramIcon, href: 'https://www.instagram.com/canadiancloudninja/', alt: 'Instagram' },
-    { icon: discordIcon, href: 'https://discord.com/invite/wg372JtEK8', alt: 'Discord' },
+    { icon: discordIcon, href: 'https://chat.whatsapp.com/D74a4GrpOwiBlFJei8Hk12', alt: 'Community Chat' },
     { icon: meetupIcon, href: 'https://www.meetup.com/vanawsug/', alt: 'Meetup' },
     { icon: youtubeIcon, href: 'https://www.youtube.com/channel/UCMfuz22CouuimIXngTMMZIQ', alt: 'YouTube' },
     { icon: awsdayIcon, href: 'https://www.awsday.ca/', alt: 'AWS Day' },
@@ -78,19 +78,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Discord CTA */}
+          {/* Community chat CTA */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Join Our Discord Channel!</h4>
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Join the Community Chat</h4>
             <p className="text-white mb-4 sm:mb-5 leading-relaxed text-sm sm:text-[15px] text-left">
               Connect with fellow AWS enthusiasts, share ideas, learn from the community, and stay updated on upcoming events
             </p>
             <a
-              href="https://discord.com/invite/wg372JtEK8"
+              href="https://chat.whatsapp.com/D74a4GrpOwiBlFJei8Hk12"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#FF9900] hover:bg-[#FF9900] text-black px-6 sm:px-8 py-3 sm:py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 text-sm sm:text-base min-h-[48px] text-center"
             >
-              Join Discord Here
+              Join the Community Chat
             </a>
           </div>
         </div>

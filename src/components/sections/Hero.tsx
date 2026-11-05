@@ -25,12 +25,12 @@ export default function Hero() {
         </p>
 
         <a
-          href="https://discord.com/invite/wg372JtEK8"
+          href="https://chat.whatsapp.com/D74a4GrpOwiBlFJei8Hk12"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-aws-orange font-source-sans font-normal text-base text-black transition-all duration-200 shadow-md hover:bg-aws-orange-dark hover:shadow-lg transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] inline-block"
         >
-          Join Our Discord Channel
+          Join the Community Chat
         </a>
       </div>
     </section>
