@@ -1,5 +1,4 @@
 import LogoArtwork from '../LogoArtwork';
-import type { ArtworkCrop } from '../LogoArtwork';
 // Import sponsor logos
 import docker from '../../assets/past_sponsors_logos/Docker-Logo-2013-2015.png';
 import datadog from '../../assets/past_sponsors_logos/Datadog_logo.svg.png';
@@ -21,47 +20,42 @@ import veeam from '../../assets/past_sponsors_logos/Veeam-Logo.jpg';
 import hashicorp from '../../assets/past_sponsors_logos/hashicorp.png';
 import couchbase from '../../assets/past_sponsors_logos/couchbase5916.png';
 
+const sponsors = [
+  { name: "Docker", logo: docker, shape: "compact", crop: {"x": 667, "y": 27, "width": 2503, "height": 2101, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "Datadog", logo: datadog, shape: "compact", crop: {"x": 0, "y": 0, "width": 1200, "height": 1200, "sourceWidth": 1200, "sourceHeight": 1200} },
+  { name: "HP", logo: hp, shape: "compact", crop: {"x": 866, "y": 26, "width": 2108, "height": 2108, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "Hootsuite", logo: hootsuite, shape: "wide", crop: {"x": 31, "y": 713, "width": 3777, "height": 734, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "VMware", logo: vmware, shape: "wide", crop: {"x": 11, "y": 780, "width": 3817, "height": 587, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "Sophos", logo: sophos, shape: "wide", crop: {"x": 14, "y": 38, "width": 1198, "height": 203, "sourceWidth": 1221, "sourceHeight": 261} },
+  { name: "NetApp", logo: netapp, shape: "compact", crop: {"x": 1011, "y": 34, "width": 1817, "height": 2092, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "SUSE", logo: suse, shape: "medium", crop: {"x": 0, "y": 0, "width": 4136, "height": 1925, "sourceWidth": 4136, "sourceHeight": 1925} },
+  { name: "Elastic", logo: elastic, shape: "medium", crop: {"x": 28, "y": 30, "width": 2372, "height": 764, "sourceWidth": 2400, "sourceHeight": 823} },
+  { name: "Trend Micro", logo: trendMicro, shape: "medium", crop: {"x": 0, "y": 196, "width": 600, "height": 208, "sourceWidth": 600, "sourceHeight": 600} },
+  { name: "Ronin", logo: ronin, shape: "wide", crop: {"x": 0, "y": 25, "width": 256, "height": 51, "sourceWidth": 256, "sourceHeight": 101} },
+  { name: "Palo Alto", logo: paloAlto, shape: "wide", crop: {"x": 2, "y": 0, "width": 2555, "height": 469, "sourceWidth": 2560, "sourceHeight": 469} },
+  { name: "Sumo Logic", logo: sumoLogic, shape: "compact", crop: {"x": 0, "y": 0, "width": 864, "height": 1168, "sourceWidth": 864, "sourceHeight": 1168} },
+  { name: "Commvault", logo: commvault, shape: "wide", crop: {"x": 0, "y": 0, "width": 1552, "height": 300, "sourceWidth": 1552, "sourceHeight": 300} },
+  { name: "Fortinet", logo: fortinet, shape: "wide", crop: {"x": 0, "y": 0, "width": 1520, "height": 176, "sourceWidth": 1520, "sourceHeight": 176} },
+  { name: "Robson Inc", logo: robson, shape: "compact", crop: {"x": 4, "y": 0, "width": 34, "height": 42, "sourceWidth": 40, "sourceHeight": 42} },
+  { name: "Veeam", logo: veeam, shape: "medium", crop: {"x": 67, "y": 516, "width": 3706, "height": 1127, "sourceWidth": 3840, "sourceHeight": 2160} },
+  { name: "HashiCorp", logo: hashicorp, shape: "wide", crop: {"x": 81, "y": 80, "width": 1738, "height": 411, "sourceWidth": 1897, "sourceHeight": 571} },
+  { name: "Couchbase", logo: couchbase, shape: "wide", crop: {"x": 28, "y": 12, "width": 747, "height": 176, "sourceWidth": 808, "sourceHeight": 203} },
+];
+
 export default function Sponsors() {
-  // Row 1 - 6 sponsors
-  const row1 = [
-    { name: 'Docker', logo: docker },
-    { name: 'Datadog', logo: datadog },
-    { name: 'HP', logo: hp },
-    { name: 'Hootsuite', logo: hootsuite, className: 'h-auto max-h-16 sm:max-h-20 md:max-h-24 lg:max-h-24 w-full object-contain' },
-    { name: 'VMware', logo: vmware },
-    { name: 'Sophos', logo: sophos, className: 'h-auto max-h-4 sm:max-h-5 md:max-h-6 lg:max-h-6 w-full object-contain' },
-  ];
-
-  // Row 2 - 7 sponsors (larger row)
-  const row2 = [
-    { name: 'NetApp', logo: netapp },
-    { name: 'SUSE', logo: suse },
-    { name: 'Elastic', logo: elastic },
-    { name: 'Trend Micro', logo: trendMicro, className: 'h-auto max-h-16 sm:max-h-20 md:max-h-24 lg:max-h-24 w-full object-contain' },
-    { name: 'Ronin', logo: ronin },
-    { name: 'Palo Alto', logo: paloAlto },
-    { name: 'Sumo Logic', logo: sumoLogic },
-  ];
-
-  // Row 3 - 6 sponsors
-  const row3 = [
-    { name: 'Commvault', logo: commvault },
-    { name: 'Fortinet', logo: fortinet },
-    { name: 'Robson Inc', logo: robson, className: 'h-auto max-h-6 sm:max-h-7 md:max-h-8 lg:max-h-8 w-full object-contain' },
-    { name: 'Veeam', logo: veeam },
-    { name: 'HashiCorp', logo: hashicorp },
-    { name: 'Couchbase', logo: couchbase, className: 'h-auto max-h-16 sm:max-h-20 md:max-h-24 lg:max-h-24 w-full object-contain' },
-  ];
-
-  const allSponsors = [...row1, ...row2, ...row3];
-
-  const crops: Record<string, ArtworkCrop> = {
-    'Hootsuite': { x: 30, y: 712, width: 3779, height: 736, sourceWidth: 3840, sourceHeight: 2160 },
-    'VMware': { x: 10, y: 779, width: 3819, height: 589, sourceWidth: 3840, sourceHeight: 2160 },
-    'Trend Micro': { x: 0, y: 195, width: 600, height: 210, sourceWidth: 600, sourceHeight: 600 },
-    'Sumo Logic': { x: 0, y: 0, width: 864, height: 1168, sourceWidth: 864, sourceHeight: 1168 },
-    'Veeam': { x: 66, y: 515, width: 3708, height: 1129, sourceWidth: 3840, sourceHeight: 2160 },
-  };
-
-  return <section id="sponsors" className="sponsors-section shell section-space"><div className="section-heading"><div><p className="eyebrow">A little support goes a long way</p><h2 className="display-heading">Thanks for making it happen.</h2></div><p>To all our past sponsors: thank you for helping us bring people together.</p></div><div className="sponsor-grid">{allSponsors.map(sponsor => <div className={`sponsor-logo${crops[sponsor.name] ? ' sponsor-logo--featured' : ''}${sponsor.name === 'Sumo Logic' ? ' sponsor-logo--sumo' : ''}`} key={sponsor.name}><LogoArtwork src={sponsor.logo} alt={sponsor.name} crop={crops[sponsor.name]} /></div>)}</div></section>;
+  return (
+    <section id="sponsors" className="sponsors-section shell section-space">
+      <div className="section-heading">
+        <div><p className="eyebrow">A little support goes a long way</p><h2 className="display-heading">Thanks for making it happen.</h2></div>
+        <p>To all our past sponsors: thank you for helping us bring people together.</p>
+      </div>
+      <div className="sponsor-grid">
+        {sponsors.map(sponsor => (
+          <div className={`sponsor-logo sponsor-logo--${sponsor.shape}`} key={sponsor.name}>
+            <LogoArtwork src={sponsor.logo} alt={sponsor.name} crop={sponsor.crop} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

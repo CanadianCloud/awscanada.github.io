@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowDown, ArrowRight, Clock3, MapPin, Menu, X } from 'lucide-react'
+import { ArrowRight, Clock3, MapPin, Menu, X } from 'lucide-react'
 import eventsData from '../../events.json'
 import Logo from './Logo'
+import lumaIcon from '../assets/social_media/luma.png'
+import linkedinIcon from '../assets/social_media/linkedin.png'
+import instagramIcon from '../assets/social_media/instagram.png'
+import meetupIcon from '../assets/social_media/meetup.png'
+import youtubeIcon from '../assets/social_media/youtube.png'
 import FAQ from './sections/FAQ'
 import Gallery from './sections/Gallery'
 import Partners from './sections/Partners'
@@ -111,8 +116,40 @@ function GlobalCommunity() {
 }
 
 function Footer() {
-  const socials = [['Luma', 'https://luma.com/awsvan'], ['LinkedIn', 'https://linkedin.com/company/canadiancloud'], ['Instagram', 'https://www.instagram.com/canadiancloudninja/'], ['Meetup', 'https://www.meetup.com/vanawsug/'], ['YouTube', 'https://www.youtube.com/channel/UCMfuz22CouuimIXngTMMZIQ'], ['AWS Day', 'https://www.awsday.ca/'], ['Cloud Summit', 'https://cloudsummit.ca/']]
-  return <footer className="site-footer"><div className="shell"><div className="footer-top"><div><p className="eyebrow">Keep the conversation going</p><h2 className="display-heading">See you at<br />the next one.</h2></div><a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange">Join the Community Chat <ArrowRight size={24} /></a></div><div className="footer-bottom"><a href="#top" aria-label="AWS User Group Vancouver home"><Logo inverse /></a><div className="footer-socials">{socials.map(([label, href]) => <a href={href} key={label} target="_blank" rel="noopener noreferrer">{label} <ArrowRight size={14} /></a>)}</div><div className="footer-small"><p>Community-led since 2014.<br />Volunteer-run. Vancouver, BC.</p><a href="#faq">Questions? Start here <ArrowDown size={14} /></a><p className="eyebrow">Helpful links</p><a href="https://tally.so/r/w7BkgA" target="_blank" rel="noopener noreferrer">Be a volunteer <ArrowRight size={14} /></a><a href="https://tally.so/r/wv79vQ" target="_blank" rel="noopener noreferrer">Call for speakers <ArrowRight size={14} /></a><a href="https://tally.so/r/mBORVN" target="_blank" rel="noopener noreferrer">Become a sponsor <ArrowRight size={14} /></a><a href="#faq-about">Code of Conduct <ArrowRight size={14} /></a><a href="https://awsusergroups.com/" target="_blank" rel="noopener noreferrer">Find AWS communities worldwide <ArrowRight size={14} /></a></div></div><div className="footer-credit"><span>© {new Date().getFullYear()} AWS User Group Vancouver</span><span>Meet. Learn. Share. Build.</span><a href="#top">Back to top ↑</a></div></div></footer>
+  const socials = [
+    { label: 'Luma', href: 'https://luma.com/awsvan', icon: lumaIcon },
+    { label: 'LinkedIn', href: 'https://linkedin.com/company/canadiancloud', icon: linkedinIcon },
+    { label: 'Instagram', href: 'https://www.instagram.com/canadiancloudninja/', icon: instagramIcon },
+    { label: 'Meetup', href: 'https://www.meetup.com/vanawsug/', icon: meetupIcon },
+    { label: 'YouTube', href: 'https://www.youtube.com/channel/UCMfuz22CouuimIXngTMMZIQ', icon: youtubeIcon },
+  ]
+  const footerLinks = [
+    ['Volunteer', 'https://tally.so/r/w7BkgA'],
+    ['Speak', 'https://tally.so/r/wv79vQ'],
+    ['Sponsor', 'https://tally.so/r/mBORVN'],
+    ['Code of Conduct', '#faq-about'],
+    ['FAQ', '#faq'],
+    ['AWS Community Day', 'https://www.awsday.ca/'],
+    ['Cloud Summit', 'https://cloudsummit.ca/'],
+    ['Global community', 'https://awsusergroups.com/'],
+  ]
+  return (
+    <footer className="compact-footer">
+      <div className="shell">
+        <div className="compact-footer-main">
+          <a href="#top" className="compact-footer-brand" aria-label="AWS User Group Vancouver home"><Logo inverse /></a>
+          <nav className="compact-socials" aria-label="Social media">
+            {socials.map(social => <a href={social.href} key={social.label} target="_blank" rel="noopener noreferrer" aria-label={social.label} title={social.label}><img src={social.icon} alt="" /></a>)}
+          </nav>
+          <a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange compact-chat">Join the Community Chat <ArrowRight size={19} /></a>
+        </div>
+        <nav className="compact-footer-links" aria-label="Footer links">
+          {footerLinks.map(([label, href]) => <a href={href} key={label} {...(href.startsWith('https:') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{label}</a>)}
+        </nav>
+        <div className="compact-footer-credit"><span>© {new Date().getFullYear()} AWS User Group Vancouver</span><span>Community-led since 2014. Volunteer-run.</span><a href="#top">Back to top ↑</a></div>
+      </div>
+    </footer>
+  )
 }
 
 export default function EditorialHome() {
