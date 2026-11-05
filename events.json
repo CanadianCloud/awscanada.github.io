@@ -13,7 +13,23 @@
     "url": "https://lu.ma/cloud-1ue4",
     "description": "",
     "price": null,
-    "registrationCount": 254
+    "registrationCount": 259
+  },
+  {
+    "id": "evt-MRVLpM7AzE263yZ",
+    "title": "2026: November - Cloud Native Vancouver",
+    "date": "Nov 25, 2026",
+    "time": "5:00 PM",
+    "startAt": "2026-11-26T00:00:00.000Z",
+    "endAt": "2026-11-26T03:10:00.000Z",
+    "location": "Vancouver",
+    "address": "",
+    "city": "Vancouver",
+    "image": "https://images.lumacdn.com/gallery-images/vj/986292e1-1875-463a-be76-da8164df0b89.png",
+    "url": "https://lu.ma/5e55u1u9",
+    "description": "",
+    "price": null,
+    "registrationCount": 0
   },
   {
     "id": "evt-4DpgVAYzwoMgQhV",
@@ -29,6 +45,6 @@
     "url": "https://lu.ma/techvancouver",
     "description": "",
     "price": null,
-    "registrationCount": 52
+    "registrationCount": 64
   }
 ]
