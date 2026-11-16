@@ -1,9 +1,9 @@
 import LogoArtwork from '../LogoArtwork';
 import type { ArtworkCrop } from '../LogoArtwork';
-import awsday from '../../assets/partner_logos/awsday.png';
-import cloudSummit from '../../assets/partner_logos/CloudSummitReversed_Stacked.png';
-import hackerRivals from '../../assets/partner_logos/Logo-Oct25-White.png';
-import cpca from '../../assets/partner_logos/CPCA_2025_LogoHorizontal_Short_Colour.png';
+import awsday from '../../assets/optimized/partner_logos-awsday.webp';
+import cloudSummit from '../../assets/optimized/partner_logos-CloudSummitReversed_Stacked.webp';
+import hackerRivals from '../../assets/optimized/partner_logos-Logo-Oct25-White.webp';
+import cpca from '../../assets/optimized/partner_logos-CPCA_2025_LogoHorizontal_Short_Colour.webp';
 
 export default function Partners() {
   const partners = [

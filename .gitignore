@@ -25,3 +25,6 @@ npm-debug.log*
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Display assets regenerated from originals by predev/prebuild
+/src/assets/optimized/

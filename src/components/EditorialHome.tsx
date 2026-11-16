@@ -2,21 +2,17 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Clock3, MapPin, Menu, X } from 'lucide-react'
 import eventsData from '../../events.json'
 import Logo from './Logo'
-import lumaIcon from '../assets/social_media/luma.png'
-import linkedinIcon from '../assets/social_media/linkedin.png'
-import instagramIcon from '../assets/social_media/instagram.png'
-import meetupIcon from '../assets/social_media/meetup.png'
-import youtubeIcon from '../assets/social_media/youtube.png'
+import Photo from './Photo'
+import { photos } from '../assets/optimized/photos'
+import lumaIcon from '../assets/optimized/social_media-luma.webp'
+import linkedinIcon from '../assets/optimized/social_media-linkedin.webp'
+import instagramIcon from '../assets/optimized/social_media-instagram.webp'
+import meetupIcon from '../assets/optimized/social_media-meetup.webp'
+import youtubeIcon from '../assets/optimized/social_media-youtube.webp'
 import FAQ from './sections/FAQ'
 import Gallery from './sections/Gallery'
 import Partners from './sections/Partners'
 import Sponsors from './sections/Sponsors'
-import speakerPhoto from '../assets/gallery/AWSDay24-119.jpg'
-import communityPhoto from '../assets/gallery/AWSDay24-050.jpg'
-import crowdPhoto from '../assets/gallery/AWSDay24-092.jpg'
-import stagePhoto from '../assets/gallery/AWSDay24-110.jpg'
-import cityPhoto from '../assets/vancouver-skyline-mountains.jpg'
-import meetupPhoto from '../assets/gallery/1-65f8993a.jpeg'
 
 const COMMUNITY_CHAT = 'https://chat.whatsapp.com/D74a4GrpOwiBlFJei8Hk12'
 const links = [['Events', '#events'], ['Our Community', '#community'], ['Community Day', '#community-day'], ['Get Involved', '#get-involved']]
@@ -55,7 +51,7 @@ function Hero() {
       <p className="eyebrow hero-eyebrow">Vancouver’s AWS community <span /></p>
       <h1 id="hero-title"><span>Cloud is better </span><span>together.</span></h1>
       <div className="hero-copy"><p>Local meetups. Shared knowledge.<br />Real connections. Community-led<br className="desktop-break" /> since 2014.</p><div className="hero-actions"><a href="#events" className="button button-ink">Explore events <ArrowRight size={20} /></a><a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange">Join the Community Chat <ArrowRight size={20} /></a></div></div>
-      <div className="hero-art"><div className="hero-orange" aria-hidden="true" /><figure className="hero-photo hero-speaker"><img src={speakerPhoto} alt="A community speaker sharing ideas at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-people"><img src={communityPhoto} alt="Community members connecting at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-city"><img src={cityPhoto} alt="Vancouver’s downtown skyline, False Creek waterfront and North Shore mountains" /></figure></div>
+      <div className="hero-art"><div className="hero-orange" aria-hidden="true" /><figure className="hero-photo hero-speaker"><Photo sizes="(max-width: 600px) 450px, 700px" name="AWSDay24-119" alt="A community speaker sharing ideas at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-people"><Photo sizes="(max-width: 600px) 450px, 700px" name="AWSDay24-050" alt="Community members connecting at AWS Community Day" fetchPriority="high" /></figure><figure className="hero-photo hero-city"><Photo sizes="(max-width: 600px) 450px, 700px" name="vancouver-skyline-mountains" alt="Vancouver’s downtown skyline, False Creek waterfront and North Shore mountains" /></figure></div>
     </section>
     <div className="values-strip" aria-label="Meet, learn, share, build"><div>Meet <span>·</span> Learn <span>·</span> Share <span>·</span> Build</div></div>
   </>
@@ -72,13 +68,13 @@ function Events() {
       const month = date.toLocaleDateString('en-CA', { month: 'short', timeZone: 'America/Vancouver' })
       const day = date.toLocaleDateString('en-CA', { day: '2-digit', timeZone: 'America/Vancouver' })
       const year = date.toLocaleDateString('en-CA', { year: 'numeric', timeZone: 'America/Vancouver' })
-      return <article className="event-row" key={event.id}><time className="event-date" dateTime={event.startAt}><span>{month}</span><strong>{day}</strong><small>{year}</small></time><div className="event-details"><h3><a href={event.url} target="_blank" rel="noopener noreferrer">{event.title}</a></h3><p><Clock3 size={17} aria-hidden="true" /> {event.time}</p><p><MapPin size={17} aria-hidden="true" /> {event.city || event.location}</p><p className="event-address">{event.address}</p></div><div className="event-visual"><img src={event.image} alt="" loading="lazy" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = index % 2 ? communityPhoto : crowdPhoto }} /><a className="button button-orange" href={event.url} target="_blank" rel="noopener noreferrer" aria-label={`Register for ${event.title}`}>Save your spot <ArrowRight size={20} /></a></div></article>
+      return <article className="event-row" key={event.id}><time className="event-date" dateTime={event.startAt}><span>{month}</span><strong>{day}</strong><small>{year}</small></time><div className="event-details"><h3><a href={event.url} target="_blank" rel="noopener noreferrer">{event.title}</a></h3><p><Clock3 size={17} aria-hidden="true" /> {event.time}</p><p><MapPin size={17} aria-hidden="true" /> {event.city || event.location}</p><p className="event-address">{event.address}</p></div><div className="event-visual"><img src={event.image} alt="" loading="lazy" decoding="async" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = index % 2 ? photos['AWSDay24-050'].src : photos['AWSDay24-092'].src }} /><a className="button button-orange" href={event.url} target="_blank" rel="noopener noreferrer" aria-label={`Register for ${event.title}`}>Save your spot <ArrowRight size={20} /></a></div></article>
     }) : <div className="events-empty"><h3>Good things are on the way.</h3><p>We’re planning our next gathering. Find upcoming announcements in our calendar or meet the community in our WhatsApp chat.</p><a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange">Join the Community Chat <ArrowRight size={20} /></a></div>}</div>
   </section>
 }
 
 function GetInvolved() {
-  return <section id="get-involved" className="involved-section shell section-space" aria-labelledby="involved-title"><div className="involved-heading"><h2 id="involved-title" className="display-heading">The stage is yours.</h2><div><p className="eyebrow">Get involved</p><p>There are many ways to contribute, whether you want to share your knowledge, help run events, or support what we do.</p></div></div><div className="involved-grid"><div className="involved-photo"><img src={crowdPhoto} alt="The Vancouver cloud community gathering at an event" loading="lazy" /><span>Made possible<br />by people like you.</span></div>{waysToHelp.map(item => <a key={item.title} className="involved-link" href={item.href} target="_blank" rel="noopener noreferrer"><span className="eyebrow">{item.number} / Get involved</span><h3>{item.title}</h3><h4 className="involved-original-title">{item.label}</h4><p>{item.text}</p><span className="involved-action">{item.action} <ArrowRight size={25} aria-hidden="true" /></span></a>)}</div></section>
+  return <section id="get-involved" className="involved-section shell section-space" aria-labelledby="involved-title"><div className="involved-heading"><h2 id="involved-title" className="display-heading">The stage is yours.</h2><div><p className="eyebrow">Get involved</p><p>There are many ways to contribute, whether you want to share your knowledge, help run events, or support what we do.</p></div></div><div className="involved-grid"><div className="involved-photo"><Photo sizes="(max-width: 600px) 450px, 700px" name="AWSDay24-092" alt="The Vancouver cloud community gathering at an event" loading="lazy" /><span>Made possible<br />by people like you.</span></div>{waysToHelp.map(item => <a key={item.title} className="involved-link" href={item.href} target="_blank" rel="noopener noreferrer"><span className="eyebrow">{item.number} / Get involved</span><h3>{item.title}</h3><h4 className="involved-original-title">{item.label}</h4><p>{item.text}</p><span className="involved-action">{item.action} <ArrowRight size={25} aria-hidden="true" /></span></a>)}</div></section>
 }
 
 function Community() {
@@ -87,10 +83,10 @@ function Community() {
 
 function CommunityDay() {
   const photos = [
-    { src: communityPhoto, alt: 'Community members connecting at AWS Community Day' },
-    { src: crowdPhoto, alt: 'Networking at AWS Community Day Vancouver' },
-    { src: stagePhoto, alt: 'An auditorium full of builders at AWS Community Day' },
-    { src: meetupPhoto, alt: 'A presentation at a past Vancouver AWS meetup' },
+    { name: 'AWSDay24-050' as const, alt: 'Community members connecting at AWS Community Day' },
+    { name: 'AWSDay24-092' as const, alt: 'Networking at AWS Community Day Vancouver' },
+    { name: 'AWSDay24-110' as const, alt: 'An auditorium full of builders at AWS Community Day' },
+    { name: '1-65f8993a' as const, alt: 'A presentation at a past Vancouver AWS meetup' },
   ]
   return <section id="community-day" className="community-day section-space" aria-labelledby="community-day-title">
     <div className="shell community-day-grid">
@@ -102,7 +98,7 @@ function CommunityDay() {
         <a href="https://www.awsday.ca/" target="_blank" rel="noopener noreferrer" className="button button-cream">Learn more about AWS Community Day <ArrowRight size={20} /></a>
         <a href="https://cloudsummit.ca/" target="_blank" rel="noopener noreferrer" className="community-day-secondary">Discover Cloud Summit in Vancouver and Toronto <ArrowRight size={18} /></a>
       </div>
-      <div className="community-day-gallery">{photos.map(photo => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" />)}</div>
+      <div className="community-day-gallery">{photos.map(photo => <Photo sizes="(max-width: 600px) 50vw, 25vw" key={photo.name} name={photo.name} alt={photo.alt} loading="lazy" />)}</div>
     </div>
   </section>
 }
@@ -139,7 +135,7 @@ function Footer() {
         <div className="compact-footer-main">
           <a href="#top" className="compact-footer-brand" aria-label="AWS User Group Vancouver home"><Logo inverse /></a>
           <nav className="compact-socials" aria-label="Social media">
-            {socials.map(social => <a href={social.href} key={social.label} target="_blank" rel="noopener noreferrer" aria-label={social.label} title={social.label}><img src={social.icon} alt="" /></a>)}
+            {socials.map(social => <a href={social.href} key={social.label} target="_blank" rel="noopener noreferrer" aria-label={social.label} title={social.label}><img src={social.icon} alt="" loading="lazy" decoding="async" /></a>)}
           </nav>
           <a href={COMMUNITY_CHAT} target="_blank" rel="noopener noreferrer" className="button button-orange compact-chat">Join the Community Chat <ArrowRight size={19} /></a>
         </div>

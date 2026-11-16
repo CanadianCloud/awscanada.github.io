@@ -11,7 +11,9 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "scrape-events": "node scripts/scrape-events.js"
+    "scrape-events": "node scripts/scrape-events.js",
+    "predev": "node scripts/optimize-images.mjs",
+    "prebuild": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@fontsource/anton": "^5.3.0",
@@ -37,6 +39,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "postcss": "^8.5.6",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.1.17",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
